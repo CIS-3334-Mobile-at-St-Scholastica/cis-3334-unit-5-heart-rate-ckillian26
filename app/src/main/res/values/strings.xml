@@ -3,4 +3,11 @@
     <string name="textViewPulse" />
     <string name="textViewSelect" />
     <string name="select_a_heart_rate">Select a Heart Rate</string>
+    <string name="pulse">Pulse:</string>
+    <string name="_99_9">99.9</string>
+    <string name="textViewRange">Range:</string>
+    <string name="textViewRangeName">Endurance</string>
+    <string name="textViewRangeDescription">Light Workout</string>
+
+
 </resources>

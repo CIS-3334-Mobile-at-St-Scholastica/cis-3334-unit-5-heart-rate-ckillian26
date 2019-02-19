@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         lvHeartRates.setAdapter(hrAdapter);
 
 
+
         lvHeartRates.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override

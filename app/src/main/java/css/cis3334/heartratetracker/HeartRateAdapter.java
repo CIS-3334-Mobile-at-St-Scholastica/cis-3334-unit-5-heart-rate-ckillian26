@@ -52,7 +52,22 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         HeartRate hr = hrList.getHeartRate(position);
 
         TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
+        TextView tvRangeName=(TextView)view.findViewById(R.id.textViewRangeName);
+        TextView tvRangeDescription=(TextView)view.findViewById(R.id.textViewRangeDescription);
+
+        if(hr.getRangeName().startsWith("Ae")){
+            tvRangeName.setTextColor(ContextCompat.getColor(context, R.color.colorZone1));
+        }else if(hr.getRangeName().startsWith("E")){
+            tvRangeName.setTextColor(ContextCompat.getColor(context, R.color.colorZone2));
+        } else if(hr.getRangeName().startsWith("R")) {
+            tvRangeName.setTextColor(ContextCompat.getColor(context, R.color.colorZone0));
+        } else {
+            tvRangeName.setTextColor(ContextCompat.getColor(context, R.color.colorZone3));
+        }
+
         tvPulse.setText(hr.getPulse().toString());
+        tvRangeName.setText(hr.getRangeName());
+        tvRangeDescription.setText(hr.getRangeDescrtiption());
 
         return(view);
     }

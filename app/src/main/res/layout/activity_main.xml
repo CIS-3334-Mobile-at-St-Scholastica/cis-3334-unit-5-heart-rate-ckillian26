@@ -15,10 +15,22 @@
         android:id="@+id/textViewSelect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/select_a_heart_rate" />
+        android:text="@string/select_a_heart_rate"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/listViewHeartRates"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ListView
+        android:id="@+id/listViewRange"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ListView
+        android:id="@+id/listViewRangeDescription"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>
