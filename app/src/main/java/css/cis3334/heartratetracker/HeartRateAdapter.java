@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import css.cis3334.heartratetracker.HeartRate;
-
 /**
  * Created by Tom Gibbons in Feb 2017.
  * For the CIS 3334 class at St. Scholastica
@@ -51,7 +49,7 @@ public class HeartRateAdapter  extends ArrayAdapter<HeartRate> {
         //get the heart rate we are displaying
         HeartRate hr = hrList.getHeartRate(position);
 
-        TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulse);
+        TextView tvPulse=(TextView)view.findViewById(R.id.textViewPulseDetail);
         TextView tvRangeName=(TextView)view.findViewById(R.id.textViewRangeName);
         TextView tvRangeDescription=(TextView)view.findViewById(R.id.textViewRangeDescription);
 

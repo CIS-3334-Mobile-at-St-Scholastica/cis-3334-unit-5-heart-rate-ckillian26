@@ -18,7 +18,7 @@
             android:textAppearance="@android:style/TextAppearance.Material.Medium" />
 
         <TextView
-            android:id="@+id/textViewPulse"
+            android:id="@+id/textViewPulseDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -8,6 +8,10 @@
     <string name="textViewRange">Range:</string>
     <string name="textViewRangeName">Endurance</string>
     <string name="textViewRangeDescription">Light Workout</string>
+    <string name="range">Range:</string>
+    <string name="pulse_here">Pulse here</string>
+    <string name="range_here">Range here</string>
+    <string name="pulse1">Pulse:</string>
 
 
 </resources>

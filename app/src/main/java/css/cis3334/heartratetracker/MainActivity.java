@@ -1,15 +1,13 @@
 package css.cis3334.heartratetracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     ArrayAdapter<HeartRate> hrAdapter;
     ListView lvHeartRates;
     TextView tvSelect;
+
+    public static final String HEARTRATE_KEY = "HEARTRATE_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         heartRateList = new HeartRateList();
         heartRateList.InitRandomElderly();
 
-        hrAdapter = new HeartRateAdapter(this, R.layout.heart_rate_row, R.id.textViewPulse, heartRateList);
+        hrAdapter = new HeartRateAdapter(this, R.layout.heart_rate_row, R.id.textViewPulseDetail, heartRateList);
         hrAdapter.setDropDownViewResource(R.layout.heart_rate_row);
         lvHeartRates.setAdapter(hrAdapter);
 
@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
                 HeartRate hr = (HeartRate) parent.getItemAtPosition(position);
                 tvSelect.setText("You selected: " + hr.toString());
+                Intent detailActIntent = new Intent(parent.getContext(), HeartDetailActivity.class);
+                detailActIntent.putExtra(HEARTRATE_KEY, hr);
+                startActivity(detailActIntent);
             }
 
         });
